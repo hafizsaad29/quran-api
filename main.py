@@ -67,3 +67,7 @@ async def get_surah_ayah_urdu(sura_id: int, aya_no: int):
         "Arabic Text": filtered_data.iloc[0]["Arabic Text"],
         "Urdu Translation": filtered_data.iloc[0]["Fateh Muhammad Jalandhri"]
     }
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
